@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/partials/*": ["./src/partials/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/public/*": ["./public/*"],
+      "@/requests/*": ["./src/requests/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/contexts/*": ["./src/contexts/*"]
     }
   }
 }
