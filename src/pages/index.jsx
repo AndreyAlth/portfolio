@@ -4,7 +4,7 @@ import Card from '@/components/Card'
 export default function Home() {
   return (
     <div className='grid grid-cols-6 gap-6'>
-      <div className='col-span-4'>
+      <div className='col-span-6 md:col-span-4'>
         <Card bgColor='bg-pink-200' disabled>
           <div className='flex items-center w-full h-full space-x-4'>
             <Image
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </Card>
       </div>
-      <div className='col-span-2'>
+      <div className='col-span-6 md:col-span-2'>
         <Card
           bgColor='bg-orange'
           propFunction={() => console.log('Descargar cv')}
@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </Card>
       </div>
-      <div className='col-span-3'>
+      <div className='col-span-6 md:col-span-3'>
         <Card bgColor='bg-blue-200'>
           <div className='flex flex-col justify-center items-center space-y-2'>
             <Image
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </Card>
       </div>
-      <div className='col-span-3'>
+      <div className='col-span-6 md:col-span-3'>
         <Card bgColor='bg-black' py='py-4'>
           <div className='flex flex-col justify-between h-full'>
             <div className='flex items-center justify-between w-full'>
@@ -113,12 +113,12 @@ export default function Home() {
           </div>
         </Card>
       </div>
-      <div className='col-span-6'>
+      <div className='col-span-6 md:col-span-6'>
         <Card bgColor='bg-[#C7D2FE]' disabled py='py-4'>
           <div className='text-left space-y-5'>
-            <h2>Recent Projects</h2>
+            <h2 className='font-semibold text-lg'>Recent Projects</h2>
             <ul>
-              <li>
+              {/* <li>
                 <div>proyecto 1</div>
               </li>
               <li>
@@ -126,15 +126,24 @@ export default function Home() {
               </li>
               <li>
                 <div>proyecto 1</div>
-              </li>
+              </li> */}
             </ul>
           </div>
-
         </Card>
       </div>
-      <div className='col-span-6'>
-        <Card bgColor='bg-[#A3E635]' disabled>
-
+      <div className='col-span-6 md:col-span-6'>
+        <Card bgColor='bg-[#A3E635]' disabled py='py-4'>
+          <div className='text-left space-y-5'>
+            <div className='flex flex-col'>
+              <h2 className='font-semibold text-lg'>Let's talk</h2>
+              <p className='font-normal'>Drop me a message with the form below</p>
+            </div>
+            <div className='flex flex-col items-end gap-5'>
+              <input className='p-2 w-full rounded-lg' type="email" placeholder='Your email' />
+              <textarea className='p-2 w-full rounded-lg' placeholder='Message' name="body" id="" cols="30" rows="10"></textarea>
+              <button className='py-2 px-14 w-fit bg-black text-white rounded-lg hover:bg-slate-900'>Send</button>
+            </div>
+          </div>
         </Card>
       </div>
     </div>
