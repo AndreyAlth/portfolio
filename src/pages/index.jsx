@@ -86,7 +86,7 @@ export default function Home() {
       <div className='col-span-6 md:col-span-3'>
         <Card bgColor='bg-black' py='py-0' px='px-0'>
           <a href='https://github.com/AndreyAlth'>
-            <div className='bg-[url(/coding.gif)] h-full rounded-lg'>
+            <div className='bg-[url(/coding.gif)]  rounded-lg h-[200px] md:h-full'>
               <div className='flex flex-col justify-between bg-black/40 h-full px-4 py-4 rounded-lg'>
                 <div className='flex items-center justify-between w-full'>
                   <svg
