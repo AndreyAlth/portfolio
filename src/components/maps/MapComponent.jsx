@@ -1,5 +1,6 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
+import CardSkeleton from '@/components/skeletons/CardSkeleton'
 
 function MapComponent({ lat, lng }) {
   const { isLoaded } = useJsApiLoader({
@@ -7,7 +8,7 @@ function MapComponent({ lat, lng }) {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API,
   })
   const containerStyle = {
-    width:  '100%',
+    width: '100%',
     height: '100%',
   }
 
@@ -27,7 +28,7 @@ function MapComponent({ lat, lng }) {
           />
         </GoogleMap>
       ) : (
-        <p className=''>Cargando...</p> 
+        <CardSkeleton />
       )}
     </>
   )

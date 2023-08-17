@@ -127,28 +127,34 @@ export default function Home() {
         </Card>
       </div>
       {/* Projects */}
-      <div className='col-span-6 md:col-span-6'>
+      {/* <div className='col-span-6 md:col-span-6'>
         <Card bgColor='bg-[#C7D2FE]' disabled py='py-4'>
           <div className='text-left space-y-5'>
             <h2 className='font-semibold text-lg'>Recent Projects</h2>
             <ul>
-              {/* <li>
-                <div>proyecto 1</div>
-              </li>
               <li>
                 <div>proyecto 1</div>
               </li>
               <li>
                 <div>proyecto 1</div>
-              </li> */}
+              </li>
+              <li>
+                <div>proyecto 1</div>
+              </li>
             </ul>
           </div>
         </Card>
-      </div>
+      </div> */}
       {/* Form */}
       <div className='col-span-6 md:col-span-6'>
         <Card bgColor='bg-[#A3E635]' disabled py='py-4'>
-          <div className='text-left space-y-5'>
+          <form
+            className='text-left space-y-5'
+            onSubmit={(e) => {
+              e.preventDefault()
+              console.log('enviado')
+            }}
+          >
             <div className='flex flex-col'>
               <h2 className='font-semibold text-lg'>Let&apos;s talk</h2>
               <p className='font-normal'>
@@ -169,11 +175,14 @@ export default function Home() {
                 cols='30'
                 rows='10'
               ></textarea>
-              <button className='py-2 px-14 w-fit bg-black text-white rounded-lg hover:bg-slate-900'>
+              <button
+                type='submit'
+                className='py-2 px-14 w-fit bg-black text-white rounded-lg hover:bg-slate-900'
+              >
                 Send
               </button>
             </div>
-          </div>
+          </form>
         </Card>
       </div>
     </div>
