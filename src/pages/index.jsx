@@ -1,9 +1,13 @@
 import Image from 'next/image'
 import Card from '@/components/Card'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export default function Home() {
+  const router = useRouter()
   return (
     <div className='grid grid-cols-6 gap-6'>
+      {/* Perifl */}
       <div className='col-span-6 md:col-span-4'>
         <Card bgColor='bg-pink-200' disabled>
           <div className='flex items-center w-full h-full space-x-4'>
@@ -22,30 +26,35 @@ export default function Home() {
           </div>
         </Card>
       </div>
+      {/* Donwload */}
       <div className='col-span-6 md:col-span-2'>
-        <Card
-          bgColor='bg-orange'
-          propFunction={() => console.log('Descargar cv')}
-        >
-          <div className='flex items-center w-full h-full space-x-4'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='35'
-              height='35'
-              viewBox='0 0 35 35'
-              fill='none'
-            >
-              <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
-                d='M6.08354 4.6252C4.375 6.33374 4.375 9.0836 4.375 14.5833V20.4167C4.375 25.9164 4.375 28.6662 6.08354 30.3748C7.79209 32.0833 10.5419 32.0833 16.0417 32.0833H18.9583C24.4581 32.0833 27.2079 32.0833 28.9165 30.3748C30.625 28.6662 30.625 25.9164 30.625 20.4167V14.5833C30.625 9.0836 30.625 6.33374 28.9165 4.6252C27.2079 2.91666 24.4581 2.91666 18.9583 2.91666H16.0417C10.5419 2.91666 7.79209 2.91666 6.08354 4.6252ZM11.6667 13.4896C11.0626 13.4896 10.5729 13.9793 10.5729 14.5833C10.5729 15.1874 11.0626 15.6771 11.6667 15.6771H23.3333C23.9374 15.6771 24.4271 15.1874 24.4271 14.5833C24.4271 13.9793 23.9374 13.4896 23.3333 13.4896H11.6667ZM11.6667 19.3229C11.0626 19.3229 10.5729 19.8126 10.5729 20.4167C10.5729 21.0207 11.0626 21.5104 11.6667 21.5104H18.9583C19.5624 21.5104 20.0521 21.0207 20.0521 20.4167C20.0521 19.8126 19.5624 19.3229 18.9583 19.3229H11.6667Z'
-                fill='white'
-              />
-            </svg>
-            <span className='text-medium text-white'>Download CV</span>
-          </div>
+        <Card bgColor='bg-orange'>
+          <Link
+            role='button'
+            href={process.env.NEXT_PUBLIC_CV_URL} 
+            download
+          > 
+            <div className='flex items-center w-full h-full space-x-4'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='35'
+                height='35'
+                viewBox='0 0 35 35'
+                fill='none'
+              >
+                <path
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  d='M6.08354 4.6252C4.375 6.33374 4.375 9.0836 4.375 14.5833V20.4167C4.375 25.9164 4.375 28.6662 6.08354 30.3748C7.79209 32.0833 10.5419 32.0833 16.0417 32.0833H18.9583C24.4581 32.0833 27.2079 32.0833 28.9165 30.3748C30.625 28.6662 30.625 25.9164 30.625 20.4167V14.5833C30.625 9.0836 30.625 6.33374 28.9165 4.6252C27.2079 2.91666 24.4581 2.91666 18.9583 2.91666H16.0417C10.5419 2.91666 7.79209 2.91666 6.08354 4.6252ZM11.6667 13.4896C11.0626 13.4896 10.5729 13.9793 10.5729 14.5833C10.5729 15.1874 11.0626 15.6771 11.6667 15.6771H23.3333C23.9374 15.6771 24.4271 15.1874 24.4271 14.5833C24.4271 13.9793 23.9374 13.4896 23.3333 13.4896H11.6667ZM11.6667 19.3229C11.0626 19.3229 10.5729 19.8126 10.5729 20.4167C10.5729 21.0207 11.0626 21.5104 11.6667 21.5104H18.9583C19.5624 21.5104 20.0521 21.0207 20.0521 20.4167C20.0521 19.8126 19.5624 19.3229 18.9583 19.3229H11.6667Z'
+                  fill='white'
+                />
+              </svg>
+              <span className='text-medium text-white'>Download CV</span>
+            </div>
+          </Link>
         </Card>
       </div>
+      {/*Maps */}
       <div className='col-span-6 md:col-span-3'>
         <Card bgColor='bg-blue-200'>
           <div className='flex flex-col justify-center items-center space-y-2'>
@@ -75,6 +84,7 @@ export default function Home() {
           </div>
         </Card>
       </div>
+      {/* Github */}
       <div className='col-span-6 md:col-span-3'>
         <Card bgColor='bg-black' py='py-4'>
           <div className='flex flex-col justify-between h-full'>
@@ -113,6 +123,7 @@ export default function Home() {
           </div>
         </Card>
       </div>
+      {/* Projects */}
       <div className='col-span-6 md:col-span-6'>
         <Card bgColor='bg-[#C7D2FE]' disabled py='py-4'>
           <div className='text-left space-y-5'>
@@ -131,17 +142,33 @@ export default function Home() {
           </div>
         </Card>
       </div>
+      {/* Form */}
       <div className='col-span-6 md:col-span-6'>
         <Card bgColor='bg-[#A3E635]' disabled py='py-4'>
           <div className='text-left space-y-5'>
             <div className='flex flex-col'>
               <h2 className='font-semibold text-lg'>Let's talk</h2>
-              <p className='font-normal'>Drop me a message with the form below</p>
+              <p className='font-normal'>
+                Drop me a message with the form below
+              </p>
             </div>
             <div className='flex flex-col items-end gap-5'>
-              <input className='p-2 w-full rounded-lg' type="email" placeholder='Your email' />
-              <textarea className='p-2 w-full rounded-lg' placeholder='Message' name="body" id="" cols="30" rows="10"></textarea>
-              <button className='py-2 px-14 w-fit bg-black text-white rounded-lg hover:bg-slate-900'>Send</button>
+              <input
+                className='p-2 w-full rounded-lg'
+                type='email'
+                placeholder='Your email'
+              />
+              <textarea
+                className='p-2 w-full rounded-lg'
+                placeholder='Message'
+                name='body'
+                id=''
+                cols='30'
+                rows='10'
+              ></textarea>
+              <button className='py-2 px-14 w-fit bg-black text-white rounded-lg hover:bg-slate-900'>
+                Send
+              </button>
             </div>
           </div>
         </Card>
