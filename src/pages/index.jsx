@@ -28,7 +28,7 @@ export default function Home() {
       {/* Donwload */}
       <div className='col-span-6 md:col-span-2'>
         <Card bgColor='bg-orange'>
-          <Link role='button' href={process.env.NEXT_PUBLIC_CV_URL} download>
+          <Link role='button' href={'https://drive.usercontent.google.com/download?id=1HPpSo9SyQWeU4sPsOLDMQFMURqufr5Bm&export=download&authuser=0&confirm=t&uuid=42abd7d8-cc52-46bb-be9c-db12443f5561&at=APZUnTVdf_8iTm48G8R9GCwhpgIQ:1692235187795'} download>
             <div className='flex items-center w-full h-full space-x-4'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
