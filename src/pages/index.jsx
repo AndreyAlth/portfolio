@@ -55,7 +55,7 @@ export default function Home() {
           <div className='h-[200px]'>
             <MapComponent lat={20.96} lng={-89.62} />
           </div>
-          <div className='absolute left-[87.88px] top-[48px] flex flex-col justify-center items-center space-y-2 bg-opacity-0'>
+          <div className='absolute left-[calc(50%-87.88px)] top-[calc(50%-48px)] flex flex-col justify-center items-center space-y-2 bg-opacity-0'>
             <Image
               src={'/images/perfil.png'}
               width={60}
