@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/html": "0.0.4",
+    "@react-email/render": "0.0.7",
+    "@react-email/tailwind": "0.0.8",
     "@react-google-maps/api": "^2.19.0",
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
