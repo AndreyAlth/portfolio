@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import Card from '@/components/Card'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
+import MapComponent from '@/components/maps/MapComponent'
 
 export default function Home() {
-  const router = useRouter()
   return (
     <div className='grid grid-cols-6 gap-6'>
       {/* Perifl */}
@@ -29,11 +28,7 @@ export default function Home() {
       {/* Donwload */}
       <div className='col-span-6 md:col-span-2'>
         <Card bgColor='bg-orange'>
-          <Link
-            role='button'
-            href={process.env.NEXT_PUBLIC_CV_URL} 
-            download
-          > 
+          <Link role='button' href={process.env.NEXT_PUBLIC_CV_URL} download>
             <div className='flex items-center w-full h-full space-x-4'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -55,9 +50,12 @@ export default function Home() {
         </Card>
       </div>
       {/*Maps */}
-      <div className='col-span-6 md:col-span-3'>
-        <Card bgColor='bg-blue-200'>
-          <div className='flex flex-col justify-center items-center space-y-2'>
+      <div className='col-span-6 md:col-span-3 h-[200px]'>
+        <div className='relative rounded-lg w-full h-full col-span-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>
+          <div className='h-[200px]'>
+            <MapComponent lat={20.96} lng={-89.62} />
+          </div>
+          <div className='absolute left-[87.88px] top-[48px] flex flex-col justify-center items-center space-y-2 bg-opacity-0'>
             <Image
               src={'/images/perfil.png'}
               width={60}
@@ -82,7 +80,7 @@ export default function Home() {
               <span className='text-sm'>Mérida, Yuc, México</span>
             </div>
           </div>
-        </Card>
+        </div>
       </div>
       {/* Github */}
       <div className='col-span-6 md:col-span-3'>
@@ -147,7 +145,7 @@ export default function Home() {
         <Card bgColor='bg-[#A3E635]' disabled py='py-4'>
           <div className='text-left space-y-5'>
             <div className='flex flex-col'>
-              <h2 className='font-semibold text-lg'>Let's talk</h2>
+              <h2 className='font-semibold text-lg'>Let&apos;s talk</h2>
               <p className='font-normal'>
                 Drop me a message with the form below
               </p>
