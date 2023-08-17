@@ -1,7 +1,12 @@
+import { render } from '@react-email/render'
 import EmailTemplate from '@/components/templates/EmailTemplate'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
+
+const html = render(<EmailTemplate email={'example@example.com'} message={'hola mundo'} />, {
+  pretty: true,
+});
 
 const sendEmail = async (req, res) => {
   try {
@@ -9,7 +14,7 @@ const sendEmail = async (req, res) => {
       from: 'Andrey <hi@andreyalth.site>',
       to: ['gabrielbarcelo9727@gmail.com'],
       subject: 'Hello world',
-      react: EmailTemplate({ firstName: 'Gabriel' }),
+      react: html,
     })
     res.status(200).json(resp)
   } catch (error) {
