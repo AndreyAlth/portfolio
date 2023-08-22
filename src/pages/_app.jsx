@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>andreyalth.site</title>
+        <link rel="icon" href="/icons/3dcube.svg" sizes="any" />
       </Head>
       <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
     </>
