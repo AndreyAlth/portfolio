@@ -9,12 +9,13 @@ const html = render(<EmailTemplate email={'example@example.com'} message={'hola 
 });
 
 const sendEmail = async (req, res) => {
+  const {email, message} = req.body
   try {
     const resp = await resend.emails.send({
       from: 'Andrey <hi@andreyalth.site>',
-      to: ['gabrielbarcelo9727@gmail.com'],
+      to: ['andreyalth@gmail.com', email],
       subject: 'Hello world',
-      react: html,
+      react: <EmailTemplate email={email} message={message} />,
     })
     res.status(200).json(resp)
   } catch (error) {
