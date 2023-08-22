@@ -19,7 +19,17 @@ function MapComponent({ lat, lng }) {
   return (
     <>
       {isLoaded ? (
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={13}
+          options={{
+            zoomControl: false,
+            streetViewControl: false,
+            mapTypeControl: false,
+            fullscreenControl: false,
+          }}
+        >
           <Marker
             position={{
               lat,
