@@ -4,7 +4,7 @@ import Maps from '@/partials/home/Maps'
 import GitHub from '@/partials/home/GitHub'
 // import Projects from '@/partials/home/Projects'
 import ContactForm from '@/partials/home/ContactForm'
-// import EmailTemplate from '@/components/templates/EmailTemplate'
+import EmailTemplate from '@/components/templates/EmailTemplate'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 

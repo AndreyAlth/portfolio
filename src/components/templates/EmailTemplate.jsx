@@ -1,23 +1,25 @@
 import * as React from 'react'
 import { Tailwind } from '@react-email/tailwind'
 
-function EmailTemplate({ email, message }) {
+function EmailTemplate({ email, message, subject }) {
   return (
     <Tailwind>
       <div className='bg-black w-full h-full text-white'>
-        <div className='flex flex-col max-w-sm mx-auto py-14'>
-          <div className='text-4xl font-bold p-4 border border-slate-100 rounded-sm w-fit mb-24'>
-            A
+        <div className='max-w-sm mx-auto py-14'>
+          <div className='text-4xl font-bold p-4 border-2 border-white rounded-lg w-fit mb-24'>
+            Andreyalth.site
           </div>
-          <div className='text-xl font-semibold'>Mensaje enviado</div>
+          <div className='text-xl font-semibold'>Message sent</div>
           <div className=''>
-            Enviaste un mensaje a <span className='italic'>andrey.site</span>{' '}
+           You sent a message to  <span className='italic'>andrey.site</span>{' '}
           </div>
           <div className='mb-5'>
-            Desde <span className='italic'>{email}</span>
+            From <span className='italic'>{email}</span>
           </div>
 
-          <div className='text-lg italic font-medium'>Mensaje</div>
+          <div className='text-lg italic font-medium'>Subject</div>
+          <div className='mb-5'>{subject}</div>
+          <div className='text-lg italic font-medium'>Message</div>
           <div>{message}</div>
         </div>
       </div>

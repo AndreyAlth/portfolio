@@ -4,18 +4,15 @@ import { Resend } from 'resend'
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
 
-const html = render(<EmailTemplate email={'example@example.com'} message={'hola mundo'} />, {
-  pretty: true,
-});
-
 const sendEmail = async (req, res) => {
-  const {email, message} = req.body
+  const { email, message, subject } = req.body
+  console.log(subject)
   try {
     const resp = await resend.emails.send({
       from: 'Andrey <hi@andreyalth.site>',
       to: ['andreyalth@gmail.com', email],
-      subject: 'Hello world',
-      react: <EmailTemplate email={email} message={message} />,
+      subject: subject,
+      react: <EmailTemplate email={email} message={message} subject={subject}/>,
     })
     res.status(200).json(resp)
   } catch (error) {
