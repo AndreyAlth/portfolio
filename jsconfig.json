@@ -9,7 +9,8 @@
       "@/requests/*": ["./src/requests/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/contexts/*": ["./src/contexts/*"],
-      "@/api/*": ["./src/pages/api/*"]
+      "@/api/*": ["./src/pages/api/*"],
+      "@/db/*": ["./src/conection/*"]
     }
   }
 }

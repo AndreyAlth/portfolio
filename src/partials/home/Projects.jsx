@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Card from '@/components/Card'
 
 function Projects() {
+
+  useEffect(() => {
+    // db()
+  }, [])
+  
+
   return (
     <Card bgColor='bg-[#C7D2FE]' disabled py='py-4'>
       <div className='text-left space-y-5'>

@@ -2,7 +2,7 @@ import Perfil from '@/partials/home/Perfil'
 import CV from '@/partials/home/CV'
 import Maps from '@/partials/home/Maps'
 import GitHub from '@/partials/home/GitHub'
-// import Projects from '@/partials/home/Projects'
+import Projects from '@/partials/home/Projects'
 import ContactForm from '@/partials/home/ContactForm'
 import EmailTemplate from '@/components/templates/EmailTemplate'
 import { ToastContainer, toast } from 'react-toastify'
@@ -23,7 +23,9 @@ export default function Home() {
       <div className='col-span-6 md:col-span-3'>
         <GitHub />
       </div>
-      <div className='col-span-6 md:col-span-6'>{/* <Projects /> */}</div>
+      <div className='col-span-6 md:col-span-6'>
+        <Projects />
+      </div>
       <div className='col-span-6 md:col-span-6'>
         <ContactForm />
       </div>
