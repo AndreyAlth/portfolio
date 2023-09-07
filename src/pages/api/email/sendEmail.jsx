@@ -6,7 +6,6 @@ const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
 
 const sendEmail = async (req, res) => {
   const { email, message, subject } = req.body
-  console.log(subject)
   try {
     const resp = await resend.emails.send({
       from: 'Andrey <hi@andreyalth.site>',
