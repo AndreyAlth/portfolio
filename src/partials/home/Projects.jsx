@@ -9,7 +9,6 @@ function Projects() {
   const getTopPorjects = async () => {
     const resp = await get_top_projects()
     if (resp.status === 200) {
-      console.log(resp)
       setProjects(resp.data)
     }
   }

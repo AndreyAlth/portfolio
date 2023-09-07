@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 function Layout({children}) {
   return (
     <main
-      className={`mx-auto max-w-3xl px-6 pb-40 pt-16 h-full w-full`}
+      className={`mx-auto px-6 pb-40 pt-16 h-full w-full`}
     >
       {children}
     </main>
