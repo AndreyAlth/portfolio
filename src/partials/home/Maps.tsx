@@ -15,7 +15,7 @@ function Maps() {
           height={60}
           alt='Picture of the author'
         />
-        <div className='bg-slate-200 rounded-lg px-4 py-1 flex space-x-2 items-center justify-center w-fit'>
+        <div className='dark:bg-gray-800 bg-red-200 rounded-lg px-4 py-1 flex space-x-2 items-center justify-center w-fit'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='12'
