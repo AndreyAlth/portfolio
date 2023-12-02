@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Card from '@/components/Card'
+import Card from '../../components/Card'
 import Link from 'next/link'
-import { get_top_projects } from '@/requests/projects'
+import { get_top_projects } from '../../requests/projects'
 
 function Projects() {
   const [projects, setProjects] = useState([])

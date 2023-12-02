@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import MapComponent from '@/components/maps/MapComponent'
+import MapComponent from '../../components/maps/MapComponent'
 
 function Maps() {
   return (

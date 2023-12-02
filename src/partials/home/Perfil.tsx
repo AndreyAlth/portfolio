@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Card from '@/components/Card'
+import Card from '../../components/Card'
 
 function Perfil() {
   return (

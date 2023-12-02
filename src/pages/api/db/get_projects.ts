@@ -1,4 +1,4 @@
-import conection from '@/db/conection'
+import conection from '../../../conection/conection'
 
 export default async function GET(req, res) {
   try {
