@@ -65,7 +65,7 @@ function ContactForm() {
   }
 
   return (
-    <Card bgColor='bg-[#A3E635]' disabled py='py-4'>
+    <Card bgColor='dark:bg-gray-800 dark:border-[.5px] dark:border-slate-500 bg-[#A3E635]' disabled py='py-4'>
       <div className='text-left space-y-5'>
         <div className='flex flex-col'>
           <h2 className='font-semibold text-lg'>Let&apos;s talk</h2>

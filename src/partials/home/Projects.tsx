@@ -18,7 +18,7 @@ function Projects() {
   }, [])
 
   return (
-    <Card bgColor='bg-[#C7D2FE]' disabled py='py-4' px='px-4'>
+    <Card bgColor='dark:bg-gray-800 dark:border-[.5px] dark:border-slate-500 bg-[#C7D2FE]' disabled py='py-4' px='px-4'>
       <div className='text-left space-y-2'>
         <h2 className='font-semibold text-lg'>Recent Projects</h2>
         <ul className='space-y-2'>

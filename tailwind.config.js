@@ -15,7 +15,9 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        orange : '#EE2E2E'
+        orange : '#EE2E2E',
+        blackDark: "#161b22",
+        cardSlate: "#161b22",
       }
     },
   },
