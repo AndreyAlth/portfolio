@@ -1,5 +1,5 @@
-import { render } from '@react-email/render'
-import EmailTemplate from '@/components/templates/EmailTemplate'
+// import { render } from '@react-email/render'
+import EmailTemplate from '../../../components/templates/EmailTemplate'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)

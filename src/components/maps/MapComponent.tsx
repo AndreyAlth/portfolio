@@ -1,6 +1,6 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api'
-import CardSkeleton from '@/components/skeletons/CardSkeleton'
+import CardSkeleton from '../../components/skeletons/CardSkeleton'
 
 function MapComponent({ lat, lng }) {
   const { isLoaded } = useJsApiLoader({

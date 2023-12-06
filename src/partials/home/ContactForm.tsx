@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import sendEmail from '@/api/email/sendEmail'
-import Card from '@/components/Card'
+import Card from '../../components/Card'
 import { toast } from 'react-toastify'
-import api from '@/components/requests/api'
+import api from '../../components/requests/api'
 
 function ContactForm() {
   const [email, setEmail] = useState(null)
@@ -91,8 +90,8 @@ function ContactForm() {
             placeholder='Message'
             name='body'
             id=''
-            cols='30'
-            rows='10'
+            cols={30}
+            rows={10}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <button

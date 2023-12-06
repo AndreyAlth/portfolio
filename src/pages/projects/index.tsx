@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import ProjectItem from '@/partials/projects/ProjectItem'
-import { get_projects } from '@/requests/projects'
+import ProjectItem from '../../partials/projects/ProjectItem'
+import { get_projects } from '../../requests/projects'
 
 function Projects() {
   const [projects, setProjects] = useState([])
