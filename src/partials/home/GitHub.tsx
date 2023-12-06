@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function GitHub() {
   return (
-    <Card bgColor='bg-black' py='py-0' px='px-0'>
+    <Card bgColor='dark:bg-gray-800 dark:border-[.5px] dark:border-slate-500 bg-black' py='py-0' px='px-0'>
       <Link href='https://github.com/AndreyAlth'>
         <div className='bg-[url(/coding.gif)]  rounded-lg h-[200px] md:h-full'>
           <div className='flex flex-col justify-between bg-black/40 h-full px-4 py-4 rounded-lg'>

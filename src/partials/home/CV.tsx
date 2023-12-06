@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function CV() {
   return (
-    <Card bgColor='bg-orange'>
+    <Card bgColor='dark:bg-gray-800 dark:border-[.5px] dark:border-slate-500 bg-orange'>
       <Link
         role='button'
         href={

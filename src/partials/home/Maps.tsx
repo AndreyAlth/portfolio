@@ -6,7 +6,7 @@ function Maps() {
   return (
     <div className='relative rounded-lg w-full h-full col-span-4 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'>
       <div className='h-[200px]'>
-        <MapComponent lat={20.96} lng={-89.62} />
+        <MapComponent lat={20.96} lng={-89.62} /> 
       </div>
       <div className='absolute left-[calc(50%-87.88px)] top-[calc(50%-48px)] flex flex-col justify-center items-center space-y-2 bg-opacity-0'>
         <Image
@@ -15,7 +15,7 @@ function Maps() {
           height={60}
           alt='Picture of the author'
         />
-        <div className='bg-slate-200 rounded-lg px-4 py-1 flex space-x-2 items-center justify-center w-fit'>
+        <div className='dark:bg-gray-800 bg-red-200 rounded-lg px-4 py-1 flex space-x-2 items-center justify-center w-fit'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='12'
